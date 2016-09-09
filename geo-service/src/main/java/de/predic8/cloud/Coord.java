@@ -7,6 +7,9 @@ public class Coord {
 	private String lat;
 	private String lon;
 
+	private Coord() {
+	}
+
 	public Coord(String lon, String lat) {
 		this.lon = lon;
 		this.lat = lat;

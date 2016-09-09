@@ -1,0 +1,3 @@
+logging:
+  level:
+    de.predic8.boot: INFO

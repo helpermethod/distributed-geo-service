@@ -27,11 +27,8 @@ public class CoordService {
 				.readValues(resourceLoader.getResource("classpath:DE.tab").getFile());
 
 		while (it.hasNext()) {
-			Map<String, String> row = it.next();
-			System.out.println(Arrays.asList(row.get("plz").split(",")));
-
-			if (Arrays.asList(row.get("plz").split(",")).contains(plz)) {
-				return Optional.of(new Coord(row.get("lon"), row.get("lat")));
+			if (Arrays.asList(it.next().get("plz").split(",")).contains(plz)) {
+				return Optional.of(new Coord(it.next().get("lon"), it.next().get("lat")));
 			}
 		}
 
