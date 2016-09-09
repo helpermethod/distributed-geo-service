@@ -10,9 +10,9 @@ public class Coord {
 	private Coord() {
 	}
 
-	public Coord(String lon, String lat) {
-		this.lon = lon;
+	public Coord(String lat, String lon) {
 		this.lat = lat;
+		this.lon = lon;
 	}
 
 	public String getLat() {

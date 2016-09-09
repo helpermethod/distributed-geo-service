@@ -45,7 +45,7 @@ public class GeoController {
 //		return restTemplate.getForObject(uri, Coord.class);
 
 //		return restTemplate.getForObject("http://geo-code-service/coords/?plz={plz}", Coord.class, plz);
-//		return geoCodeServiceClient.coords(plz);
-		return geoCodeResolver.resolve(plz);
+		return geoCodeServiceClient.coords(plz);
+//		return geoCodeResolver.resolve(plz);
 	}
 }
