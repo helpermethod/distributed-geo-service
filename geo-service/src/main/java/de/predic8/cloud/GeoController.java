@@ -21,21 +21,21 @@ public class GeoController {
 
 	@Autowired
 	private CoordService coordService;
-	@Autowired
-	private DiscoveryClient discoveryClient;
-	@Autowired
-	private RestTemplate restTemplate;
-	@Autowired
-	private GeoCodeServiceClient geoCodeServiceClient;
-	@Autowired
-	private GeoCodeResolver geoCodeResolver;
+//	@Autowired
+//	private DiscoveryClient discoveryClient;
+//	@Autowired
+//	private RestTemplate restTemplate;
+//	@Autowired
+//	private GeoCodeServiceClient geoCodeServiceClient;
+//	@Autowired
+//	private GeoCodeResolver geoCodeResolver;
 
 	@RequestMapping(value = "/coords", method = RequestMethod.GET)
 	public Coord coords(@RequestParam("plz") String plz) throws IOException {
 		logger.info("GET http://geo-service/coords/" + plz);
-//		return coordService.findOneByPlz(plz).orElseThrow(NotFoundException::new);
+		return coordService.findOneByPlz(plz).orElseThrow(NotFoundException::new);
 
-		// setze einen laufenden geo-code-service voraus
+		// setzt einen laufenden geo-code-service voraus
 //		URI uri = UriComponentsBuilder.fromUri(discoveryClient.getInstances("geo-code-service").get(0).getUri())
 //				.path("/coords")
 //				.queryParam("plz", plz)
@@ -43,9 +43,7 @@ public class GeoController {
 //				.toUri();
 
 //		return restTemplate.getForObject(uri, Coord.class);
-
-//		return restTemplate.getForObject("http://geo-code-service/coords/?plz={plz}", Coord.class, plz);
-		return geoCodeServiceClient.coords(plz);
+//		return geoCodeServiceClient.coords(plz);
 //		return geoCodeResolver.resolve(plz);
 	}
 }

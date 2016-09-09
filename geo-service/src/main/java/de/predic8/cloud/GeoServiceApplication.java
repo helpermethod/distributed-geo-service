@@ -10,13 +10,13 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-@EnableHystrixDashboard
-@EnableHystrix
-@EnableFeignClients
-@EnableDiscoveryClient
+//@EnableHystrixDashboard
+//@EnableHystrix
+//@EnableFeignClients
+//@EnableDiscoveryClient
 @SpringBootApplication
 public class GeoServiceApplication {
-	@LoadBalanced
+//	@LoadBalanced
 	@Bean
 	public RestTemplate restTemplate() {
 		return new RestTemplate();

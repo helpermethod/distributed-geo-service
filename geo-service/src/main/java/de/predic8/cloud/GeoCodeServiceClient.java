@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * @author Oliver Weiler (weiler@predic8.de)
  */
-@FeignClient(name = "geo-code-service", fallback = GeoCodeServiceClientFallback.class)
+@FeignClient("geo-code-service")
 public interface GeoCodeServiceClient {
 	@RequestMapping("/coords")
 	Coord coords(@RequestParam("plz") String plz);
