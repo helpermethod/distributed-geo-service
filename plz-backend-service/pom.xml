@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>de.predic8.boot</groupId>
-	<artifactId>geo-code-service</artifactId>
+	<artifactId>plz-backend-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>geo-code-service</name>
+	<name>plz-backend-service</name>
 	<description>Demo project for Spring Cloud</description>
 
 	<parent>

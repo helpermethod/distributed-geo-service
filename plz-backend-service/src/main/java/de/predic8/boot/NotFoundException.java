@@ -1,4 +1,4 @@
-package de.predic8.cloud;
+package de.predic8.boot;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

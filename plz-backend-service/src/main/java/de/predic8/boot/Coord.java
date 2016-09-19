@@ -1,4 +1,4 @@
-package de.predic8.cloud;
+package de.predic8.boot;
 
 /**
  * @author Oliver Weiler (weiler@predic8.de)
