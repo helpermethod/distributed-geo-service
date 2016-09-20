@@ -22,7 +22,7 @@ public class CoordsController {
 
 	@RequestMapping(value = "/coords", method = RequestMethod.GET)
 	public Coord coords(@RequestParam("plz") String plz) throws IOException {
-		logger.info("GET http://plz-backend-service/coords/" + plz);
+		logger.info("GET http://plz-backend-service/coords/?plz=" + plz);
 
 		return coordService.findOneByPlz(plz).orElseThrow(NotFoundException::new);
 	}
