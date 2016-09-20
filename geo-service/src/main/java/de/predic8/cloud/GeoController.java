@@ -29,7 +29,7 @@ public class GeoController {
 
 	@RequestMapping(value = "/coords", method = RequestMethod.GET)
 	public Coord coords(@RequestParam("plz") String plz) throws IOException {
-		logger.info("GET http://geo-service/coords/" + plz);
+		logger.info("GET http://geo-service/coords/?plz=" + plz);
 
 		return restTemplate.getForObject("http://localhost:8081/coords/?plz={plz}", Coord.class, plz);
 	}
