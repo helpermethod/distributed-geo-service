@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * @author Oliver Weiler (weiler@predic8.de)
  */
-@FeignClient(value = "plz-backend-service")
+@FeignClient(value = "plz-backend-service", fallback = PlzBackendServiceClientFallback.class)
 public interface PlzBackendServiceClient {
 	@RequestMapping("/coords")
 	Coord coords(@RequestParam("plz") String plz);

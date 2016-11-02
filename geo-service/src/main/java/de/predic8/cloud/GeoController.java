@@ -31,6 +31,6 @@ public class GeoController {
 	public Coord coords(@RequestParam("plz") String plz) throws IOException {
 		logger.info("GET http://geo-service/coords/" + plz);
 
-		return restTemplate.getForObject("http://localhost:8081/coords/?plz={plz}", Coord.class, plz);
+		return plzBackendServiceClient.coords(plz);
 	}
 }
